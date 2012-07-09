@@ -28,7 +28,7 @@ func main() {
 
 	timers := ticked.Timers{helloTimer, byeTimer}
 
-    timers.Run()
+	timers.Run()
 }
 ```
 
