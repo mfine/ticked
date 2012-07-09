@@ -26,9 +26,9 @@ func main() {
 	// bye timer every 4 seconds
 	byeTimer := ticked.NewTimer(4*time.Second, func() bool { return true }, func() { println("bye") })
 
-	timers := ticked.Timers{helloTimer, byeTimer}
+	go helloTimer.Run()
 
-	timers.Run()
+	byeTimer.Run()
 }
 ```
 

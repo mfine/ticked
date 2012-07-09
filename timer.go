@@ -22,11 +22,3 @@ func (timer *Timer) Run() {
 		}
 	}
 }
-
-type Timers []*Timer
-
-func (timers Timers) Run() {
-	for _, timer := range timers {
-		go timer.Run()
-	}
-}
